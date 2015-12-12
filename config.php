@@ -5,7 +5,7 @@
 	configinherit:(bool)
 */
 
-namespace infrajs\controller\ext;
+namespace infrajs\controller;
 
 class config
 {
@@ -18,7 +18,7 @@ class config
 				$layer[$name] = array();
 			}
 			foreach ($layer[$nametpl] as $i => $v) {
-				$layer[$name][$i] = infra_template_parse(array($layer[$nametpl][$i]), $layer);
+				$layer[$name][$i] = Template::parse(array($layer[$nametpl][$i]), $layer);
 			}
 		}
 	}
