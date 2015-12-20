@@ -2,8 +2,8 @@
 namespace infrajs\controller;
 use infrajs\event\Event;
 use infrajs\path\Path;
-use infrajs\infra\Infra;
-Infra::req('controller');
+use infrajs\infra\Config;
+Config::get('controller');
 Event::handler('oninit', function () {
 	ext\config::init();
 });
