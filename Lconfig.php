@@ -5,9 +5,11 @@
 	configinherit:(bool)
 */
 
-namespace infrajs\controller;
+namespace infrajs\layer\config;
 
-class config
+use infrajs\controller\External;
+
+class Lconfig
 {
 	public static function configtpl(&$layer)
 	{
@@ -24,7 +26,7 @@ class config
 	}
 	public static function init()
 	{
-		external::add('configtpl', function &(&$now, &$ext, &$layer, &$external, $i) {
+		External::add('configtpl', function &(&$now, &$ext, &$layer, &$external, $i) {
 			//if(!isset($layer['configtpl']))return $now;
 			//if(isset($layer['config']))return $now;
 			if (!$now) {
