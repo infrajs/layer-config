@@ -4,7 +4,7 @@ use infrajs\event\Event;
 use infrajs\path\Path;
 use infrajs\config\Config;
 Config::get('controller');
-Event::handler('oninit', function () {
+Event::handler('Infrajs.oninit', function () {
 	Lconfig::init();
 });
 Event::handler('layer.oninit', function (&$layer) {
