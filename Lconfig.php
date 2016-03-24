@@ -8,6 +8,7 @@
 namespace infrajs\layer\config;
 
 use infrajs\controller\External;
+use infrajs\template\Template;
 
 class Lconfig
 {
