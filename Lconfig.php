@@ -37,11 +37,12 @@ class Lconfig
 			return $now;
 		});
 	}
-	public static function configinherit($layer)
+	public static function configinherit(&$layer)
 	{
-		if (isset($layer['configinherit'])) {
-			$layer['config'] = $layer['parent']['config'];
-			unset($layer['configinherit']);
-		}
+		if (empty($layer['configinherit'])) return;
+		if (empty($layer['parent'])) return;
+		if (empty($layer['parent']['config'])) return;
+		$layer['config'] = $layer['parent']['config'];
+		unset($layer['configinherit']);
 	}
 }
