@@ -10,4 +10,4 @@ Event.handler('Layer.oninit',function(layer){
 Event.handler('Layer.oncheck', function (layer){
 	//config
 	infrajs.configtpl(layer);
-}, 'config:counter');
+}, 'Layer'); //config должен сформироваться до начала всех остальных обработок. Чтобы jsontpl мог уже использовать config
