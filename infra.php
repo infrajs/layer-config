@@ -13,5 +13,4 @@ Event::handler('Layer.oninit', function (&$layer) {
 
 Event::handler('Layer.oncheck', function (&$layer) {
 	Lconfig::configtpl($layer);
-}, 'config:external');
-
+}, 'Layer'); //config должен сформироваться до начала всех остальных обработок. Чтобы jsontpl мог уже использовать config
